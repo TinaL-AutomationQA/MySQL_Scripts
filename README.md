@@ -47,3 +47,9 @@ WHERE salary > 10000;
 ```
 ## License
 This repository is for educational purposes only. You are welcome to use and modify the scripts for your own learning.
+
+## Contact
+
+If you have any questions or suggestions about this framework, feel free to reach out!
+Email: [liut44194@gmail.com]
+GitHub Profile: https://github.com/TinaL-AutomationQA
