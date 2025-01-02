@@ -25,7 +25,7 @@ This repository contains SQL scripts and examples that for learning journey. The
 ├── 8.Auto-increment
 ├── 9.views&index
 ├── 10.TCL commands commit rollback
-├──11.100 questions practice for hr database
+├── 11.100 questions practice for hr database
 ├── hr-schema-mysql.sql - Sample HR schema for practice
 ```
 
