@@ -15,15 +15,15 @@ This repository contains SQL scripts and examples that for learning journey. The
 
 ## Folder Structure
 ```bash
-├── 1.craete database table insert record and retrieving
-├── 2.filtering rows where clause operators and pattern maching
+├── 1.Craete database table insert record and retrieving
+├── 2.Filtering rows where clause operators and pattern maching
 ├── 3.DDL Data defined language
-├── 4.build in functions
-├── 5. group by having&order by clauses in
-├── 6.umion&union all & join&sub query
-├── 7.integrity constraints
+├── 4.Build in functions
+├── 5.Group by having&order by clauses in
+├── 6.Umion&union all & join&sub query
+├── 7.Integrity constraints
 ├── 8.Auto-increment
-├── 9.views&index
+├── 9.Views&index
 ├── 10.TCL commands commit rollback
 ├── 11.100 questions practice for hr database
 ├── hr-schema-mysql.sql - Sample HR schema for practice
