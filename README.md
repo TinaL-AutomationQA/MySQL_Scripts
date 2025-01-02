@@ -15,16 +15,17 @@ This repository contains SQL scripts and examples that for learning journey. The
 
 ## Folder Structure
 ```bash
-├── lesson 3 - Create Database, Table, Insert Records
-├── lesson 4 - Filtering Rows with WHERE Clause
-├── lesson 5 - Data Definition Language (DDL)
-├── lesson 6 - Built-in Functions
-├── lesson 7 - Group By and Having Clauses
-├── lesson 8 - Union and Union All
-├── lesson 10 - Integrity Constraints
-├── lesson 11 - Auto-Increment
-├── lesson 12 - Views and Indexes
-├── lesson 13 - Transaction Control Language (TCL)
+├── 1.craete database table insert record and retrieving
+├── 2.filtering rows where clause operators and pattern maching
+├── 3.DDL Data defined language
+├── 4.build in functions
+├── 5. group by having&order by clauses in
+├── 6.umion&union all & join&sub query
+├── 7.integrity constraints
+├── 8.Auto-increment
+├── 9.views&index
+├── 10.TCL commands commit rollback
+├──11.100 questions practice for hr database
 ├── hr-schema-mysql.sql - Sample HR schema for practice
 ```
 
