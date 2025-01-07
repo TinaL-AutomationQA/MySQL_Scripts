@@ -277,7 +277,37 @@ where d.department_id=e.department_id
 group by d.department_name
 having count1>3;
 
--- 79.
+-- 79. List the managers whose sal is more than his employess avg salary.
+select * from employees m where m.employee_id in(select manager_id from employees)
+and m.salary>(select avg(e.salary)from employees e where e.manager_id=m.manager_id);
 
+-- 80.List the emp whose sal<his manager but more than any other manager. 
+select * from employees w, employees m where w.manager_id=m.employee_id and w.salary<m.salary 
+and w.salary>any(select salary from employees where employee_id in(select manager_id from employees));
+
+-- 81.Find out emps whose salaries greater than salaries of their managers. 
+select * from employees m1,employees m2 where m1.manager_id=m2.employee_id and m1.salary>m2.salary;
+
+-- 82.List those Emps whose Salary is odd value. 
+select * from employees where salary%2 !=0;
+
+-- 83.List the emp’s whose Salary contain 3 digits. 
+use hr;
+select * from employees where length(salary)=3;
+
+-- 84.List the emps who joined in the month of DEC. 
+select * from employees where month(hire_date)=12;
+
+-- 85.List the emps whose names contains ‘A’.
+select * from employees where first_name like '%A%';
+
+-- 86. List the emps whose first 2 chars from Hiredate=last 2 characters of Salary.
+select * from employees where substr(hire_date,1,2)=substr(salary,length(salary)-1,length(salary));
+
+-- 87.List the emps those who joined in company before 15th of the month. 
+select * from employees where day(hire_date)<15;
+
+-- 88.List the emps who are working as Managers. 
+select * from employees where employee_id in(Select manager_id from employees);
 
 
