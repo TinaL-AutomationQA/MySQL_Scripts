@@ -309,5 +309,30 @@ select * from employees where day(hire_date)<15;
 
 -- 88.List the emps who are working as Managers. 
 select * from employees where employee_id in(Select manager_id from employees);
+select * from departments;
+-- 89.List THE Name of dept where highest no.of emps are working.
+select department_name from departments where department_id in
+(select department_id from employees group by department_id having count(*) in (select max(count(*)) from employees group by department_id));
 
+-- 90.List the emps who joined in the company on the same date. 
+select * from employees e where hire_date in(select hire_date from employees where e.employee_id<>employee_id);
 
+-- 91.List the name of the dept where more than average no. of emps are working. 
+select department_name from departments where department_id in (select department_id from employees group by department_id having count(*)>(select count(*)/count(distinct(department_id)) from employees));
+
+-- 92.List the Managers name who is having max no.of emps working under him. 
+select first_name from employees where employee_id=(select manager_id from employees group by manager_id order by count(*) desc limit 1);
+
+-- 93.List those Managers who are getting less than his emps Salary.
+select distinct m.first_name,m.salary from employees w ,employees m where w.manager_id=m.employee_id and w.salary>m.salary;
+
+-- 94.Print the details of all the emps who are sub-ordinates to Blake.
+select * from employees where manager_id=(select employee_id from employees where first_name="blake");
+
+-- 95.List the emps who are working as Managers using co-related sub-query.
+select * from employees where employee_id in(select manager_id from employees );
+
+-- 96.List the emps whose Mgr name is ‘Jones’ and also with his Manager name. 
+select employee_id,first_name from employees where manager_id=(select manager_id from employees where first_name="jones");  
+
+-- 97.Find out how may Managers are their in the company. 
